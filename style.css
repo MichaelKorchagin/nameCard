@@ -1,3 +1,97 @@
-h1 {
-    font-size: 50px;
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.wholePageWrapper {
+    display: flex;
+    margin: 20px;
+}
+
+/*.footerWrapper {*/
+/*    border: black solid 2px;*/
+
+/*    width: 50px;*/
+/*    margin-right: 10px;*/
+/*    min-height: 98vh;*/
+
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*}*/
+
+
+/* burger */
+.burgerMenu {
+    cursor: pointer;
+    margin-top: 20px;
+}
+.burgerMenu:hover {
+    transform: scale(0.9, 0.9);
+}
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 6px 0;
+}
+
+/* navigation */
+.navWrapper {
+    border: black solid 2px;
+
+    width: 100%;
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navItem a {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    position: relative;
+}
+
+.navItem a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navItem a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.navItem {
+    margin-top: 40%;
+}
+
+/* Content */
+.genPhoto {
+    position: relative;
+    right: -40%;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    border: black solid 2px;
+    overflow: hidden;
+}
+.content {
+
 }
