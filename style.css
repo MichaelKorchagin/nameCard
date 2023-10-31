@@ -30,7 +30,7 @@ body {
 
 /* navigation */
 .navWrapper {
-    width: 100%;
+    width: 50%;
 
     position: relative;
     top: 0;
@@ -60,14 +60,14 @@ body {
     text-align: end;
 }
 
-.navItem a {
+.link {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     position: relative;
 }
 
-.navItem a::before {
+.link::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -80,17 +80,19 @@ body {
     transition: transform 0.3s ease;
 }
 
-.navItem a:hover::before {
+.link:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 /* Content */
 .genPhoto {
+    padding-top: 50px;
     position: relative;
 }
 
 .contentWrapper {
+    width: 50%;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -105,18 +107,22 @@ body {
 
 .contactItem {
     display: flex;
+    cursor: pointer;
+    color: black;
+    text-decoration: underline;
 }
 
 .contactItem p {
-    margin: 0 5px 3px 0;
+    margin: 0 0 3px 30px;
 }
 
 .pBold {
     font-weight: bold;
+    font-size: 20px;
 }
 
 .callFormButton {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     background-color: black;
     color: white;
@@ -133,6 +139,9 @@ body {
 .callFormButton:hover {
     background-color: white;
     color: black;
+}
+#moreButton {
+    cursor: pointer;
 }
 
 
@@ -158,4 +167,34 @@ body {
     .wholePageWrapper {
         font-size: 18px;
     }
+}
+
+
+
+/* Banners */
+.bannerCopy {
+    position: fixed;
+    bottom: 20px;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyWrap {
+    width: 70%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(134, 134, 134, 0.8);
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.bannerCopyVisible .copyWrap {
+    opacity: 1;
+    visibility: visible;
 }

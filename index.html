@@ -12,10 +12,10 @@
             <div class="nav">
                 <div class="aboutWrap">
                     <div id="home" class="navItem">
-                        <a href="index.html" style="font-size: 60px">Mikhail K</a>
+                        <a class="link" href="index.html" style="font-size: 60px">Mikhail K</a>
                     </div>
                     <div id="about" class="navItem">
-                        <a href="index.html">About me</a>
+                        <a class="link" href="index.html">About me</a>
                     </div>
                 </div>
             </div>
@@ -23,10 +23,10 @@
                 <div class="aboutWrap">
                     <div id="handy" class="navItem">
                         <h1>Portfolio</h1>
-                        <a href="handy.html">Home Maintenance Services</a>
+                        <a class="link" href="handy.html">Home Maintenance Services</a>
                     </div>
                     <div id="dev" class="navItem">
-                        <a href="#">Software Development portfolio</a>
+                        <a class="link" href="#">Software Development portfolio</a>
                     </div>
                 </div>
             </div>
@@ -35,30 +35,51 @@
                     <div class="contactItem">
                         <button class="callFormButton">Book job</button>
                     </div>
-                    <div class="contactItem">
-                        <p>BenderRodriguez***@gmail.com</p>
-                        <p> - </p>
-                        <p class="pBold"> E-mail</p>
+                    <div>
+                        <a class="contactItem" href="mailto:benderrodriguez***@gmail.com">
+                            <p>BenderRodriguez***@gmail.com</p>
+                            <p class="pBold">E-mail</p>
+                        </a>
                     </div>
                     <div class="contactItem">
-                        <p>(628) 269 ** ** </p>
-                        <p> - </p>
-                        <p class="pBold">Telegram / What`s up / Phone</p>
+                        <div class="contactItem" id="copyDiv">
+                            <p id="copyNumber">+1 628 *** ** ** </p>
+                            <p class="pBold">Telegram / What`s up / Phone</p>
+                        </div>
                     </div>
-                    <div class="contactItem">
-                        <p>@bender</p>
-                        <p> - </p>
-                        <p class="pBold">Telegram</p>
+                    <div>
+                        <div class="more" id="moreButton">
+                            <p>> - more</p>
+                        </div>
+                        <div class="moreHidden" style="visibility: hidden">
+                            <div class="contactItem">
+                                <a href="https://www.linkedin.com/in/mikhail-korchagin-5993b2260/" target="_blank">LinkedIn</a>
+                            </div>
+                            <div class="contactItem">
+                                <a href="#" target="_blank">Telegram</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="contentWrapper">
             <div class="genPhoto">
-                <img alt="Photo is missing" id="generalPhoto" src="img/me.JPG" style="width: 60%">
+                <img alt="Photo is missing" id="generalPhoto" src="img/me.JPG" style="width: 70%">
             </div>
         </div>
     </div>
 </div>
+
+<div class="bannerCopy" id="bannerCopy" style="visibility: hidden">
+    <div class="copyWrap">
+        Number was copy
+    </div>
+</div>
+
+
+
+<script src="src/index.js"></script>
+
 </body>
 </html>
