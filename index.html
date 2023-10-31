@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Mikhail</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="wholePageWrapper">
@@ -12,7 +13,7 @@
             <div class="nav">
                 <div class="aboutWrap">
                     <div id="home" class="navItem">
-                        <a class="link" href="index.html" style="font-size: 60px">Mikhail K</a>
+                        <a class="link" id="name" href="index.html" style="font-size: 60px">Mikhail K</a>
                     </div>
                     <div id="about" class="navItem">
                         <a class="link" href="index.html">About me</a>
@@ -33,30 +34,30 @@
             <div class="nav2">
                 <div class="contacts">
                     <div class="contactItem">
-                        <button class="callFormButton">Book job</button>
-                    </div>
-                    <div>
-                        <a class="contactItem" href="mailto:benderrodriguez***@gmail.com">
-                            <p>BenderRodriguez***@gmail.com</p>
-                            <p class="pBold">E-mail</p>
-                        </a>
+                        <a class="contactButton" style="visibility: hidden">Book job</a>
                     </div>
                     <div class="contactItem">
-                        <div class="contactItem" id="copyDiv">
-                            <p id="copyNumber">+1 628 *** ** ** </p>
-                            <p class="pBold">Telegram / What`s up / Phone</p>
+                        <p class="apIndex">BenderRodriguez***@gmail.com</p>
+                        <a class="contactButton" href="mailto:benderrodriguez***@gmail.com">E-mail</a>
+                    </div>
+                    <div class="contactItem">
+                        <div>
+                            <p class="apIndex" id="copyNumber">+1 628 *** ** ** </p>
+                            <p class="apIndex" style="font-size: 15px">Telegram / What`s up / Phone</p>
                         </div>
+                        <div class="contactButton" id="copyDiv">Copy phone</div>
                     </div>
                     <div>
-                        <div class="more" id="moreButton">
-                            <p>> - more</p>
+                        <div id="moreButton">
+                            <p>more</p>
                         </div>
                         <div class="moreHidden" style="visibility: hidden">
                             <div class="contactItem">
-                                <a href="https://www.linkedin.com/in/mikhail-korchagin-5993b2260/" target="_blank">LinkedIn</a>
+                                <a class="contactButton" href="https://www.linkedin.com/in/mikhail-korchagin-5993b2260/"
+                                   target="_blank">LinkedIn</a>
                             </div>
                             <div class="contactItem">
-                                <a href="#" target="_blank">Telegram</a>
+                                <a class="contactButton" href="#" target="_blank">Telegram</a>
                             </div>
                         </div>
                     </div>
@@ -73,10 +74,9 @@
 
 <div class="bannerCopy" id="bannerCopy" style="visibility: hidden">
     <div class="copyWrap">
-        Number was copy
+        The number was copied
     </div>
 </div>
-
 
 
 <script src="src/index.js"></script>
