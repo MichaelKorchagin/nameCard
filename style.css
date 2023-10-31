@@ -4,11 +4,13 @@ body {
     height: 100%;
     margin: 0;
 }
+
 .intro {
     display: flex;
     margin: 20px;
     height: 90vh;
 }
+
 .flex {
     display: flex;
 }
@@ -18,9 +20,11 @@ body {
     cursor: pointer;
     margin-top: 20px;
 }
+
 .burgerMenu:hover {
     transform: scale(0.9, 0.9);
 }
+
 .bar {
     width: 30px;
     height: 3px;
@@ -41,6 +45,7 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 .nav, .aboutWrap {
     display: flex;
     flex-direction: column;
@@ -49,22 +54,28 @@ body {
     margin-bottom: auto;
     margin-top: auto;
 }
+
 .nav, .nav2 {
     min-width: 70%;
 }
+
 .navItem {
     margin-bottom: 10%;
     text-align: end;
 }
+
 #name {
     font-weight: bold;
+    font-size: 60px;
 }
+
 .link {
     text-decoration: none;
     font-size: 25px;
     color: black;
     position: relative;
 }
+
 .link::before {
     content: "";
     position: absolute;
@@ -77,22 +88,24 @@ body {
     transform-origin: bottom right;
     transition: transform 0.3s ease;
 }
+
 .link:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 /* Content */
-.genPhoto {
-    padding-top: 50px;
-    position: relative;
-}
 .contentWrapper {
+    margin: 10px;
     width: 50%;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
 }
+.genPhoto {
+    margin-top: 50px;
+}
+
 
 /* contacts */
 .contacts {
@@ -101,21 +114,28 @@ body {
     width: 100%;
 
 }
+
 .contactItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 5px 5px;
 }
+
 .apIndex, .contactItem {
     color: black;
     text-decoration: none;
 }
+
 .apIndex {
     font-weight: bold;
     font-size: 20px;
     margin: 0 0 3px 0;
 }
+#numberLabel {
+    font-size: 15px;
+}
+
 .contactButton {
     padding: 5px 8px;
 
@@ -134,10 +154,12 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
+
 .contactButton:hover {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     color: black;
 }
+
 #moreButton {
     cursor: pointer;
 
@@ -151,36 +173,20 @@ body {
 
     transition: background-color 0.3s, color 0.3s;
 }
+
 #moreButton:hover {
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0, 0, 0, 0.15);
 }
+
 #moreButton p {
     margin: 0;
 }
+
 .moreHidden {
     display: flex;
+    justify-content: space-evenly;
 }
 
-/* Phone */
-@media (max-width: 768px) {
-    .wholePageWrapper {
-        font-size: 14px;
-    }
-}
-
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .wholePageWrapper {
-        font-size: 16px;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1025px) {
-    .wholePageWrapper {
-        font-size: 18px;
-    }
-}
 
 /* Banners */
 .bannerCopy {
@@ -192,6 +198,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .copyWrap {
     width: 70%;
     padding: 20px 0;
@@ -203,6 +210,7 @@ body {
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+
 .bannerCopyVisible .copyWrap {
     opacity: 1;
     visibility: visible;
