@@ -28,14 +28,20 @@
         flex-direction: column;
         align-items: center;
     }
+    .navWrapper {
+        width: 100%;
+    }
+    #secondNav {
+        margin-top: 150px;
+    }
     #moreButton {
-        width: 136px;
+         width: 136px;
     }
     .genPhoto {
         margin-top: 20px;
     }
-    #secondNav {
-        margin-top: 150px;
+    .bannerCopy {
+        top: 20px;
     }
 }
 @media (min-width: 769px) and (max-width: 1280px) {
