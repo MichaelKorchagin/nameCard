@@ -184,6 +184,9 @@ body {
 }
 
 #moreButton:hover {
+    background-color: var(--second-color);
+}
+#moreButton:active {
     background-color: var(--third-color);
 }
 
