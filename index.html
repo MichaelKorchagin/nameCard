@@ -17,12 +17,14 @@
                         <a class="link" id="name" href="index.html">Mikhail K</a>
                     </div>
                     <div id="about" class="navItem">
-                        <a class="link" href="index.html">About me</a>
+                        <a class="link" href="#section2">About me</a>
+                        <section id="section1"></section>
                     </div>
                 </div>
             </div>
             <div class="nav" id="secondNav">
                 <div class="aboutWrap">
+                    <section id="section2"></section>
                     <div id="handy" class="navItem">
                         <a class="link" href="handy.html">Home Maintenance Services</a>
                     </div>
@@ -33,7 +35,8 @@
                     </div>
                 </div>
             </div>
-            <div class="nav2">
+            <div class="nav2" id="nav2" style="bottom: -1400px">
+                <button id="openNavButton" class="openNavButton" style="display: block;"></button>
                 <div class="contacts">
                     <div class="contactItem">
                         <a class="contactButton" style="visibility: hidden">Book job</a>
@@ -53,7 +56,7 @@
                         <div id="moreButton">
                             <p>more</p>
                         </div>
-                        <div class="moreHidden" style="visibility: hidden">
+                        <div class="moreHidden" style="display: none">
                             <div class="contactItem">
                                 <a class="contactButton" href="https://www.linkedin.com/in/mikhail-korchagin-5993b2260/"
                                    target="_blank">LinkedIn</a>
@@ -67,8 +70,13 @@
             </div>
         </div>
         <div class="contentWrapper">
+<!--            <div class="genPhoto">-->
+<!--                <img alt="Photo is missing" id="generalPhoto" src="img/me.JPG" style="width: 70%">-->
+<!--            </div>-->
             <div class="genPhoto">
-                <img alt="Photo is missing" id="generalPhoto" src="img/me.JPG" style="width: 70%">
+                <div class="backgroundImage">
+                    <img alt="Photo is missing" id="generalPhoto" src="img/me.JPG">
+                </div>
             </div>
         </div>
     </div>
@@ -79,7 +87,6 @@
         The number was copied
     </div>
 </div>
-
 
 <script src="src/index.js"></script>
 

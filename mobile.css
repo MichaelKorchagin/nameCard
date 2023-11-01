@@ -3,12 +3,15 @@
     .link {
         font-size: 20px;
     }
+
     .apIndex, .contactButton {
         font-size: 18px;
     }
+
     #numberLabel {
         font-size: 16px;
     }
+
     .genPhoto {
         margin-top: 100px;
     }
@@ -17,79 +20,172 @@
 
 /* Phone */
 @media (max-width: 1291px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+    }
+    .wholePageWrapper {
+        height: auto;
+        margin: 0;
+    }
     .intro {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px;
     }
-    .contactItem, .numberDiv, .more, .contentWrapper, .genPhoto {
+
+    .contactItem, .numberDiv, .more, .contentWrapper, .genPhoto, .nav2 {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .contactItem {
         margin-bottom: 40px;
     }
+
     .navWrapper {
         width: 100%;
     }
+
+
+
     .nav2 {
         margin-top: 40px;
     }
-    #secondNav {
-        margin-top: 150px;
+    .nav2 {
+        position: fixed;
+        margin: 0;
+        width: 110%;
+        border-radius: 10%;
+        border: solid #696969 5px;
+        height: 1500px;
+        background-color: var(--second-color);
+        transition: bottom 0.3s ease;
     }
+    #openNavButton {
+        width: 70%;
+    }
+    .openNavButton {
+        cursor: pointer;
+
+        border: 10px solid #696969;
+        border-radius: 80px;
+
+        margin-top: 30px;
+        height: 25px;
+        transition: transform 0.3s ease;
+    }
+
+    .openNavButtonArrow {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        transform: scale(0.5, 1);
+        transition: transform 0.3s ease;
+    }
+
+
+    #secondNav {
+        position: absolute;
+        top: 400%;
+    }
+
     .contactButton {
         width: 250px;
         border-radius: 10px;
+        margin-top: 10px;
+        padding: 20px 0;
+
+        background-color: var(--third-color);
     }
-    #moreButton {
-        width: 136px;
+
+    .contentWrapper {
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
     }
+
     .genPhoto {
-        margin-top: 20px;
+        width: 100%;
+        z-index: 1;
+        margin-top: 0;
     }
+
+    #generalPhoto {
+        width: 100%;
+    }
+
+    .backgroundImage img {
+        border-radius: 0 0 0 0;
+    }
+
     .bannerCopy {
+        border: #000000 4px solid;
         top: 20px;
     }
 }
+
 @media (min-width: 769px) and (max-width: 1291px) {
     #name {
         font-weight: bold;
         font-size: 150px;
     }
+
     .link {
+        font-weight: bold;
         font-size: 40px;
     }
+
     .apIndex, .contactButton {
+        font-weight: bold;
         font-size: 36px;
     }
+
     #numberLabel {
+        font-weight: bold;
         font-size: 32px;
     }
+
     #moreButton {
+        font-weight: bold;
         font-size: 40px;
-        width: 250px;
+        width: 400px;
+        padding: 10px 0;
     }
+
     .copyWrap {
         font-size: 40px;
         font-weight: bold;
     }
 }
+
 @media (max-width: 768px) {
     .link {
         font-size: 20px;
     }
+
     .apIndex, .contactButton {
         font-size: 18px;
     }
+
     #numberLabel {
         font-size: 14px;
     }
+
     #name {
         font-weight: bold;
-        font-size: 120px;
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    #name {
+        font-weight: bold;
+        font-size: 50px;
     }
 }
 
