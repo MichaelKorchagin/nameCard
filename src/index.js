@@ -32,7 +32,8 @@ copyDiv.addEventListener("click", function () {
 
 const openNavButton = document.getElementById("openNavButton");
 const nav2 = document.getElementById("nav2");
-openNavButton.addEventListener("click", function () {
+
+function swipeContacts() {
     if (nav2.style.bottom === "-1400px") {
         nav2.style.bottom = "-500px";
     } else {
@@ -46,6 +47,9 @@ openNavButton.addEventListener("click", function () {
         openNavButton.classList.remove('openNavButtonArrow');
         openNavButton.style.display = 'block';
     }
+}
+openNavButton.addEventListener("click", function () {
+    swipeContacts();
 });
 
 function visibilitySwipeButton() {
