@@ -156,6 +156,9 @@
         width: 400px;
         padding: 10px 0;
     }
+    #moreButton:hover {
+        background-color: var(--third-color);
+    }
 
     .copyWrap {
         font-size: 40px;
