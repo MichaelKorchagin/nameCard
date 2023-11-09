@@ -15,7 +15,7 @@ function popUpBannerCopy() {
     popUp.classList.add('bannerCopyVisible');
     setTimeout(() => {
         popUp.classList.remove('bannerCopyVisible');
-    }, 2000);
+    }, 4000);
 }
 
 const copyDiv = document.getElementById("copyDiv");

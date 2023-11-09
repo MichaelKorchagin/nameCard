@@ -26,20 +26,32 @@
         padding: 0;
         min-height: 100%;
     }
+
     .wholePageWrapper {
         height: auto;
         margin: 0;
     }
+
     .intro {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .contactItem, .numberDiv, .more, .contentWrapper, .genPhoto, .nav2 {
+    .more, .contentWrapper, .genPhoto, .nav2 {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .contacts {
+        margin-top: 10px;
+    }
+
+    .contactItem, .numberDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
 
     .contactItem {
@@ -51,10 +63,10 @@
     }
 
 
-
     .nav2 {
         margin-top: 40px;
     }
+
     .nav2 {
         position: fixed;
         margin: 0;
@@ -65,9 +77,11 @@
         background-color: var(--second-color);
         transition: bottom 0.3s ease;
     }
+
     #openNavButton {
         width: 70%;
     }
+
     .openNavButton {
         cursor: pointer;
 
@@ -87,10 +101,13 @@
         transition: transform 0.3s ease;
     }
 
+    #swipeAbout {
+        margin: 100px;
+    }
+
 
     #secondNav {
-        position: absolute;
-        top: 300%;
+        justify-content: left;
     }
 
     .contactButton {
@@ -105,7 +122,6 @@
     .contentWrapper {
         margin: 0;
         width: 100%;
-        position: absolute;
         z-index: -1;
     }
 
@@ -152,6 +168,7 @@
         width: 400px;
         padding: 10px 0;
     }
+
     #moreButton:hover {
         background-color: var(--third-color);
     }
