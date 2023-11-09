@@ -62,7 +62,6 @@
         width: 100%;
     }
 
-
     .nav2 {
         margin-top: 40px;
     }
@@ -108,6 +107,7 @@
 
     #secondNav {
         justify-content: left;
+        margin-bottom: 400px;
     }
 
     .contactButton {
