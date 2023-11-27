@@ -108,6 +108,9 @@ body {
     display: flex;
     justify-content: space-between;
     overflow-y: auto;
+
+    position: fixed;
+    right: 10px;
 }
 .genPhoto {
     margin-top: 50px;
@@ -129,7 +132,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 5px;
+
+    margin: 8px 0;
 }
 
 .apIndex, .contactItem {
@@ -169,6 +173,8 @@ body {
     color: black;
 }
 #moreButton {
+    background-color: var(--main-color);
+
     cursor: pointer;
 
     border: black solid 2px;
@@ -194,9 +200,13 @@ body {
     margin: 0;
 }
 
-.moreHidden {
-    justify-content: space-evenly;
+.moreButtons {
+    margin: 20px;
+}
 
+.moreHidden {
+    display: flex;
+    justify-content: space-between;
 }
 
 

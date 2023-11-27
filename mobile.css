@@ -45,7 +45,7 @@
     }
 
     .contacts {
-        margin-top: 10px;
+        margin-top: 50px;
     }
 
     .contactItem, .numberDiv {
@@ -123,6 +123,8 @@
         margin: 0;
         width: 100%;
         z-index: -1;
+
+        position: static;
     }
 
     .genPhoto {
@@ -164,9 +166,11 @@
     }
 
     #moreButton {
+        background-color: var(--main-color);
+
         font-size: 40px;
-        width: 400px;
-        padding: 10px 0;
+        width: 100%;
+        padding: 2px 0;
     }
 
     #moreButton:hover {
