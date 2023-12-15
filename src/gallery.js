@@ -6,19 +6,27 @@ let easeInOutQuart = "cubic-bezier(0.77, 0, 0.175, 1)";
 slides[0].classList.add("active");
 navLinks[0].classList.add("active");
 
-navLinks.forEach((navLink, activeIndex) => {
-    overlays[activeIndex].style.zIndex = `${navLinks.length - activeIndex}`;
+let imgIndex = 1;
+let conts = document.querySelectorAll(".carousel .slides .cont");
+
+
+navLinks.forEach((navLink, indexActiveNav) => {
+    overlays[indexActiveNav].style.zIndex = `${navLinks.length - indexActiveNav}`;
     navLink.addEventListener("click", () => {
         // nav-link
-        navLinks.forEach(navLink => navLink.classList.remove("active"));
+        navLinks.forEach(navLink => {
+            navLink.classList.remove("active");
+        });
+
         navLink.classList.add("active");
 
         // slide
         let currentSlide = document.querySelector(".carousel .slides img.active");
+        slides.forEach(slide => slide.classList.remove("active"));
         let slideFadeOut = currentSlide.animate(
             [
-                { transform: "translateX(0)", opacity: 1 },
-                { transform: "translateX(5%)", opacity: 0 }
+                {transform: "translateX(0)", opacity: 1},
+                {transform: "translateX(5%)", opacity: 0}
             ],
             {
                 duration: 600,
@@ -28,69 +36,33 @@ navLinks.forEach((navLink, activeIndex) => {
         );
 
         slideFadeOut.onfinish = () => {
-            slides.forEach(slide => slide.classList.remove("active"));
-            let activeSlide = slides[activeIndex];
+            let activeSlide = null;
+            conts.forEach((cont, indexCont) => {
+                if (indexCont === indexActiveNav) {
+                    activeSlide = cont.children[0];
+                }
+            })
             activeSlide.classList.add("active");
             activeSlide.animate(
                 [
-                    { transform: "translateX(-5%)", opacity: 0 },
-                    { transform: "translateX(0)", opacity: 1 }
+                    {transform: "translateX(-5%)", opacity: 0},
+                    {transform: "translateX(0)", opacity: 1}
                 ],
-                { duration: 600, easing: "ease-out", fill: "forwards" }
+                {
+                    duration: 600,
+                    easing: "ease-out",
+                    fill: "forwards"
+                }
             );
         };
 
         // overlay
         maxZIndex += 1;
-        let activeOverlay = overlays[activeIndex];
+        let activeOverlay = overlays[indexActiveNav];
         activeOverlay.style.zIndex = `${maxZIndex}`;
         activeOverlay.animate(
-            [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }],
-            { duration: 1200, fill: "forwards", easing: easeInOutQuart }
+            [{transform: "scaleX(0)"}, {transform: "scaleX(1)"}],
+            {duration: 1200, fill: "forwards", easing: easeInOutQuart}
         );
     });
 });
-
-let imgIndex = 1;
-let conts = document.querySelectorAll(".carousel .slides .cont");
-
-function showNextImage() {
-    let contIndex = 0;
-
-    // Скрываем текущее изображение
-    conts.forEach(cont => {
-        if (navLinks[contIndex].classList.contains('active')) {
-            let imagesInCont = cont.querySelectorAll("img");
-            imagesInCont.forEach(img => {
-                img.classList.remove("active");
-            });
-        }
-        contIndex++;
-    });
-
-    contIndex = 0;
-
-    // Показываем следующее изображение
-    conts.forEach(cont => {
-        if (navLinks[contIndex].classList.contains('active')) {
-            let imagesInCont = cont.querySelectorAll("img");
-            if (imgIndex < imagesInCont.length) {
-                imagesInCont[imgIndex].classList.add("active");
-            } else {
-                imgIndex = 0;
-                imagesInCont[imgIndex].classList.add("active");
-            }
-        }
-        contIndex++;
-    });
-
-    imgIndex++;
-}
-
-// Запускаем функцию смены картинок каждые 3 секунды
-setInterval(() => {
-    showNextImage();
-}, 3000);
-
-
-

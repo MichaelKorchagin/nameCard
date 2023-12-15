@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+
 }
 
 header {
@@ -41,7 +43,6 @@ nav a {
         left: 10em;
 
         img {
-            position: absolute;
             width: 450px;
             opacity: 0;
             z-index: 9999;
@@ -98,11 +99,14 @@ nav a {
 }
 
 
-.carousel .slides .cont img {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.cont {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
 }
 
-.carousel .slides .cont img.active {
-    opacity: 1;
+.cont p {
+    z-index: 100000;
+
+    font-size: 18px;
 }

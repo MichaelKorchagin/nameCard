@@ -145,6 +145,12 @@
         border: #000000 4px solid;
         top: 20px;
     }
+
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1291px) {
