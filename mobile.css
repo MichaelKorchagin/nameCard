@@ -192,6 +192,10 @@
     .overlays {
         width: 90em;
     }
+
+    .cont img {
+        max-width: 80em;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1291px) {
