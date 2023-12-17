@@ -147,9 +147,50 @@
     }
 
 
+
     .carousel {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow-x: scroll;
+        padding-left: 20%;
+    }
+
+    .carousel .nav-links li {
+        list-style: none;
+        text-align: center;
+    }
+    .carousel .nav-links {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
+        overflow-x: auto;
+        white-space: nowrap;
+        z-index: 2;
+        margin-top: 10px;
+    }
+
+    .carousel .nav-links .nav-link {
+        color: #7f8c8d;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-right: 20px;
+    }
+    .carousel .overlays {
+        width: 90%;
+    }
+    .overlays, .slides {
+        margin-top: 10%;
+    }
+    .overlays {
+        width: 90em;
     }
 }
 

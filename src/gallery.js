@@ -3,11 +3,13 @@ let slides = document.querySelectorAll(".carousel .slides img");
 let overlays = document.querySelectorAll(".carousel .bar");
 let maxZIndex = navLinks.length;
 let easeInOutQuart = "cubic-bezier(0.77, 0, 0.175, 1)";
-slides[0].classList.add("active");
-navLinks[0].classList.add("active");
 
 let imgIndex = 1;
 let conts = document.querySelectorAll(".carousel .slides .cont");
+
+conts[0].classList.add("active");
+navLinks[0].classList.add("active");
+
 
 
 navLinks.forEach((navLink, indexActiveNav) => {
@@ -21,9 +23,9 @@ navLinks.forEach((navLink, indexActiveNav) => {
         navLink.classList.add("active");
 
         // slide
-        let currentSlide = document.querySelector(".carousel .slides img.active");
-        slides.forEach(slide => slide.classList.remove("active"));
-        let slideFadeOut = currentSlide.animate(
+        let currentCont = document.querySelector(".cont.active");
+        conts.forEach(slide => slide.classList.remove("active"));
+        let contFadeOut = currentCont.animate(
             [
                 {transform: "translateX(0)", opacity: 1},
                 {transform: "translateX(5%)", opacity: 0}
@@ -35,15 +37,15 @@ navLinks.forEach((navLink, indexActiveNav) => {
             }
         );
 
-        slideFadeOut.onfinish = () => {
-            let activeSlide = null;
+        contFadeOut.onfinish = () => {
+            let activeCont = null;
             conts.forEach((cont, indexCont) => {
                 if (indexCont === indexActiveNav) {
-                    activeSlide = cont.children[0];
+                    activeCont = cont;
                 }
             })
-            activeSlide.classList.add("active");
-            activeSlide.animate(
+            activeCont.classList.add("active");
+            activeCont.animate(
                 [
                     {transform: "translateX(-5%)", opacity: 0},
                     {transform: "translateX(0)", opacity: 1}
