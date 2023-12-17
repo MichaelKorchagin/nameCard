@@ -8,7 +8,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 40px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +33,12 @@ nav a {
     margin-top: 8%;
 }
 
+
+
+
+#jobsLogo {
+    width: 60px;
+}
 .carousel {
     position: relative;
     display: flex;
@@ -76,7 +82,8 @@ nav a {
 
         .nav-link {
             font-size: 2rem;
-            font-family: Lora, serif;
+            font-family: "Malgun Gothic", serif;
+            font-weight: bold;
             line-height: 2;
             text-decoration: none;
             color: #7f8c8d;
@@ -113,4 +120,7 @@ nav a {
     z-index: 100000;
 
     font-size: 18px;
+}
+.contList {
+    margin: 0;
 }

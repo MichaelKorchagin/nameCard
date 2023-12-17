@@ -147,12 +147,22 @@
     }
 
 
-
     .carousel {
         position: relative;
         width: 90%;
         margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .slides {
+            position: relative;
+            bottom: 25%;
+            left: -25%;
+        }
     }
+
 
     .nav-links {
         position: absolute;
@@ -167,6 +177,7 @@
         list-style: none;
         text-align: center;
     }
+
     .carousel .nav-links {
         display: flex;
         flex-direction: row;
@@ -183,15 +194,19 @@
         transition: 0.3s;
         margin-right: 20px;
     }
+
     .carousel .overlays {
         width: 90%;
     }
+
     .overlays, .slides {
         margin-top: 20%;
     }
+
     .cont {
         top: 20%;
     }
+
     .cont img {
         width: 400px;
     }
@@ -206,6 +221,7 @@
     .link {
         font-size: 40px;
     }
+
     h2 {
         font-size: 35px;
     }
