@@ -187,13 +187,13 @@
         width: 90%;
     }
     .overlays, .slides {
-        margin-top: 10%;
+        margin-top: 20%;
     }
     .cont {
         top: 20%;
     }
     .cont img {
-        width: 300px;
+        width: 400px;
     }
 }
 
