@@ -189,12 +189,11 @@
     .overlays, .slides {
         margin-top: 10%;
     }
-    .overlays {
-        width: 90em;
-    }
-
     .cont {
-        max-width: 80em;
+        top: 10%;
+    }
+    .cont img {
+        width: 300px;
     }
 }
 
